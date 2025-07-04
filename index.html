@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu Portfólio</title>
+    <title>Portfólio Weslânia Soares</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- Menu fixo de retângulos -->
-    <nav class="menu-retangular">
-        <div class="menu-item item-1" data-label= "Quem sou eu?"></div>
-        <div class="menu-item item-2" data-label= "Formação"></div>
-        <div class="menu-item item-3" data-label= "Portfólio"></div>
-        <div class="menu-item item-4" data-label= "Contato"></div>
-        <div class="menu-item item-5" data-label= "Curiosidades"></div>
+<header class="cabecalho-fixo">
+  <div class="container-cabecalho">
+    <h1 class="titulo-fixo">Weslânia Soares</h1>
+    <nav class="menu-circular">
+      <div class="menu-item item-1" data-label="Quem sou eu?"></div>
+      <div class="menu-item item-2" data-label="Formação"></div>
+      <div class="menu-item item-3" data-label="Portfólio"></div>
+      <div class="menu-item item-4" data-label="Contato"></div>
+      <div class="menu-item item-5" data-label="Curiosidades"></div>
     </nav>
+  </div>
+</header>
 
 <section id="sobre">
     <div class="container-sobre">
         <div class="texto-sobre">  
                      
-    <h1>Olá, eu sou a Weslânia Soares,</h1>
+    <h1>Olá,</h1>
     <p>
-    Engenheira de produção que descobriu na tecnologia uma nova forma de criar, organizar e transformar ideias em soluções reais.
+    Para começar, permita-me apresentar. Me chamo Weslânia Soares e sou graduada em engenharia de produção. E neste universo de constantes mudanças descobri na tecnologia uma nova forma de criar, organizar e transformar ideias em soluções reais.
     <br>
     Minha caminhada começou na área da qualidade, onde atuei com auditorias, certificações, desenvolvimento de produtos, atendimento ao cliente e melhoria de processos. 
     <br>
@@ -43,7 +48,15 @@
     </div>
 </section>
 
-    
+<footer class="menu-inferior"> <!--Cria um rodapé para o menu inferior, com uma classe para estilização.-->
+  <nav> <!--Indica que o conteúdo dentro é um menu de navegação, melhorando a acessibilidade.-->
+    <a href="#sobre" class="menu-item-inferior item-1">Sobre mim</a>
+    <a href="#formação" class="menu-item-inferior item-2">Formação</a>
+    <a href="#portfólio" class="menu-item-inferior item-3">Portfólio</a>
+    <a href="#contato" class="menu-item-inferior item-4">Contato</a>
+    <a href="#curiosidades" class="menu-item-inferior item-5">Curiosidades</a>
+  </nav>
+</footer>
 
 </body>
 </html>

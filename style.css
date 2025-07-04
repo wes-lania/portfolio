@@ -1,156 +1,247 @@
-/*Menu retangular fixo*/
-.menu-retangular {
-    position: fixed; /* fixa o menu na tela */
-    top:0; /* alinha no topo da tela */
-    left: 50%; /* leva até o meio */
-    transform: translateX(-50%); /* centraliza exatamente no meio */
-    display: flex;
-    gap: 10px; /* espaço entre os retângulos */
-    padding: 10px 0;
-    z-index: 10; /* fica por cima dos outros elementos */
+/* Cabeçalho fixo */
+.cabecalho-fixo {
+  position: fixed; /* Faz o cabeçalho ficar fixo no topo da página */
+  top: 0; /* Alinha o cabeçalho ao topo */
+  left: 0; /* Alinha o cabeçalho à esquerda */
+  width: 100%; /* Ocupa toda a largura da tela */
+  background-color: #A1866F; /* Cor de fundo do cabeçalho */
+  z-index: 999; /* Garante que o cabeçalho fique acima de outros elementos */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Adiciona uma sombra sutil */
+  padding: 40px 20px; /* Espaçamento interno: 10px em cima/baixo, 20px nas laterais */
 }
 
-/* Retângulos superior*/
-.item-1 {
-    width: 50px;
-    height: 60px;
-    position:relative; /* necessário para posicionar o texto com ::after */
-    cursor: pointer; /* muda o cursor ao passar por cima */
-    transition: transform 0.3s ease; /* animação suave para efeito hover */   
+/* Container do cabeçalho */
+.container-cabecalho {
+  display: flex; /* Usa flexbox para organizar título e menu na mesma linha */
+  flex-direction: row; /* Título e menu na mesma linha */
+  align-items: center; /* Alinha verticalmente título e menu */
+  justify-content: space-between; /* Título à esquerda, menu centralizado */
+  width: 90%; /* Ocupa toda a largura do cabeçalho */
 }
 
-.item-2 {
-    width: 50px;
-    height: 70px;
-    position:relative; /* necessário para posicionar o texto com ::after */
-    cursor: pointer; /* muda o cursor ao passar por cima */
-    transition: transform 0.3s ease; /* animação suave para efeito hover */   
+/* Título fixo */
+.titulo-fixo {
+  color: #6F4E37;
+  font-size: 4.0rem;
+  margin: 0; /* Remove margens extras */
+  margin-left: 40px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: left; /* Garante que o título fique à esquerda */
 }
 
-.item-3 {
-    width: 50px;
-    height: 80px;
-    position:relative; /* necessário para posicionar o texto com ::after */
-    cursor: pointer; /* muda o cursor ao passar por cima */
-    transition: transform 0.3s ease; /* animação suave para efeito hover */   
+/* Menu circular fixo */
+.menu-circular {
+  display: flex;
+  gap: 20px; /* Espaço entre os retângulos */
 }
 
-.item-4 {
-    width: 50px;
-    height: 90px;
-    position:relative; /* necessário para posicionar o texto com ::after */
-    cursor: pointer; /* muda o cursor ao passar por cima */
-    transition: transform 0.3s ease; /* animação suave para efeito hover */   
+.menu-item {
+  width: 140px;
+  height: 140px;
+  position: relative; /* Necessário para posicionar o texto com ::after */
+  cursor: pointer; /* Muda o cursor ao passar por cima */
+  transition: transform 0.3s ease; /* Animação suave para efeito hover */
+  border-radius: 50%;  
 }
 
-.item-5 {
-    width: 50px;
-    height: 100px;
-    position:relative; /* necessário para posicionar o texto com ::after */
-    cursor: pointer; /* muda o cursor ao passar por cima */
-    transition: transform 0.3s ease; /* animação suave para efeito hover */   
-}
-
-/* Cores do menu superior*/
-.item-1 { background-color:#6F4E37; color: #A1866F; }
-.item-2 { background-color:#A1866F; color: #6F4E37; }
-.item-3 { background-color:#6F4E37; color: #A1866F; }
-.item-4 { background-color:#A1866F; color: #6F4E37; }
-.item-5 { background-color:#6F4E37; color: #A1866F; }
+/* Cores do menu superior */
+.item-1 { background-color: #6F4E37; color: #654C34; }
+.item-2 { background-color: #654C34; color: #6F4E37; }
+.item-3 { background-color: #6F4E37; color: #654C34; }
+.item-4 { background-color: #654C34; color: #6F4E37; }
+.item-5 { background-color: #6F4E37; color: #654C34; }
 
 /* TEXTO ESCONDIDO – aparecerá só no hover */
 .menu-item::before {
-    content: attr(data-label);
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color:white;
-    font-size: 0.50rem;
-    text-align: center;
-    border-radius:5px;
-    opacity: 0;
-    transition: opacity 0.2s ease;
-    padding: 5px;
-    pointer-events: nome; /* evita interferência no clique */
+  content: attr(data-label);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+  padding: 5px;
+  pointer-events: none; /* Evita interferência no clique */
 }
 
 /* TEXTO VISÍVEL APENAS NO HOVER */
 .menu-item:hover::before {
-    opacity: 1; /* pega o conteúdo do atributo data-label */
+  opacity: 1; /* Pega o conteúdo do atributo data-label */
 }
 
-/* Efeito do mouse no menu superior*/
+/* Efeito do mouse no menu superior */
 .menu-item:hover {
-    transform: scale(1.1); /* faz o "zoom out" crescer um pouco */
+  transform: scale(1.1); /* Faz o "zoom out" crescer um pouco */
 }
 
-/*Formatando o corpo do site*/
+/* Formatando o corpo do site */
 body {
-    background-color: #4B3621; /*deixa o fundo desta cor*/
-    color: #C8B6A6; /*deixa o texto desta cor*/
-    font-family: Arial, Helvetica, sans-serif; /*define a fonte*/
-    padding: 100px; /*espaço interno nas bordas da tela*/
-    margin: 0;
+  background-color: #654C34; /* Deixa o fundo desta cor */
+  color: #C8B6A6; /* Deixa o texto desta cor */
+  font-family: Arial, Helvetica, sans-serif; /* Define a fonte */
+  padding: 0 20px 10px 10px; /* Topo 0, laterais 10px, embaixo 10px */
+  margin: 0;
+  padding-top: 500px; /* Ajustado para altura menor do cabeçalho */
 }
 
-/*Container com texto + imagem */
+/* Container com texto + imagem */
 .container-sobre {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start; center;
-    gap: 40px;
-    max-width: 1500px;
-    margin: 0 auto; /* Quebra para baixo em telas pequenas */
-    flex-wrap: wrap; /* Quebra para baixo em telas pequenas */
+  display: grid;
+  grid-template-columns: 2fr 300px; /* Coluna 1: texto, coluna 2: imagem */
+  align-items: flex-start;
+  gap: 10px;
+  margin-left: 150px; /* Importante para grudar no canto esquerdo */
+  margin-right: 800px; /* O restante do espaço fica à direita */
+  max-width: none;
 }
 
-/*Texto com largura flexível */
+/* Texto com largura flexível */
 .texto-sobre {
-    flex: 2;
-    min-width: 500px;
+  max-width: none; /* Impede que ele ocupe espaço demais */
 }
 
-/*Formatando os título*/
+/* Texto da seção Sobre */
+.texto-sobre p {
+  font-size: 2.0rem; /* Define o tamanho da fonte para os parágrafos na seção Sobre */
+  text-align: left; /* Alinha o texto à esquerda */
+  line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
+}
+
+/* Formatando os títulos */
 h1 {
-    font-size: 2rem; /*tamanho da fonte*/
-    color: #C8B6A6; 
-    font-weight: bold; /*negrito*/
-    margin-bottom: 20px; /*espaço abaixo do título*/
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: 3rem; /* Tamanho da fonte */
+  color: #C8B6A6;
+  font-weight: bold; /* Negrito */
+  margin-bottom: 20px; /* Espaço abaixo do título */
+  margin-top: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
-/*Formatando os parágrafos*/
+/* Formatando os parágrafos */
 p {
-    text-align: left; /*alinhando à esquerda*/
-    line-height: 1.6; /*espaçamento entre linhas*/
+  text-align: left; /* Alinhando à esquerda */
+  line-height: 2.0; /* Espaçamento entre linhas */
 }
 
-/*Foto do perfil*/
+/* Foto do perfil */
 .foto-perfil {
-    flex: 0 0 300px; /* largura fixa para imagem */
-    height: 300px; /*mantém o formato quadrado */
-    border-radius: 50%; /*transforma em círculo */
-    object-fit: cover; /*garante que a imagem preencha o espaço circular */
-    border: 3px solid #C8B6A6;
-    margin-top: 30px;
-}   
+  width: 600px; /* Largura da imagem */
+  height: 600px; /* Mantém o formato quadrado */
+  border-radius: 50%; /* Transforma em círculo */
+  object-fit: cover; /* Garante que a imagem preencha o espaço circular */
+  border: 3px solid #C8B6A6;
+  margin-top: 10%;
+  margin-left: 0; /* Ou mais, se quiser */
+}
+
+/*MENU INFERIOR*/
+.menu-inferior {
+  position: relative; /* Posiciona o menu em relação ao fluxo normal */
+  background-color: #654C34; /* Cor de fundo consistente com o body */
+  padding: 20px 0; /* Espaçamento interno vertical */
+  width: 100%; /* Ocupa toda a largura da página */
+  text-align: center; /* Centraliza os itens horizontalmente */
+  margin-top: 250px; /* Afastamento para baixo como ponto de partida */
+  }
+  
+.menu-inferior nav {
+  display: inline-flex; /* Alinha os itens em linha, centralizados */
+  gap: 100px; /* Espaço entre os retângulos */
+}
+
+.menu-item-inferior {
+  display: inline-block; /* Garante que os itens sejam tratados como blocos em linha */
+  width: 300px; /* Tamanho fixo de largura */
+  height: 50px; /* Tamanho fixo de altura */
+  padding: 20px 30px; /* Espaçamento interno para dar tamanho ao retângulo */
+  background-color: #A1866F; /* Cor de fundo base */
+  color: #C8B6A6; /* Cor do texto */
+  text-decoration: none; /* Remove sublinhado dos links */
+  font-size: 2.0rem; /* Tamanho da fonte */
+  font-family: Arial, Helvetica, sans-serif; /* Fonte consistente com o body */
+  border-radius: 0; /* Cantos retos, diferentemente dos círculos */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  line-height: 50px; /* Ajusta a altura da linha para centralizar verticalmente */
+  transition: background-color 0.3s ease; /* Animação suave para hover */
+  font-weight: bold; /* Negrito */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra embaixo dos retângulos */
+}
+
+/* Efeito do mouse no menu inferior */
+.menu-item-inferior:hover {
+  transform: scale(1.2); /* Faz o "zoom out" crescer um pouco */
+}
+
+.menu-item-inferior.item-1 { background-color: #6F4E37; }
+.menu-item-inferior.item-2 { background-color: #6F4E37; }
+.menu-item-inferior.item-3 { background-color: #6F4E37; }
+.menu-item-inferior.item-4 { background-color: #6F4E37; }
+.menu-item-inferior.item-5 { background-color: #6F4E37; }
+
+/* Efeito de hover no menu inferior */
+.menu-item-inferior:hover {
+  background-color: #A1866F; /* Cor alternativa no hover */
+  color: #6F4E37; /* Cor do texto no hover */
+}
 
 /* Responsivo para telas menores */
+/* Responsivo para telas menores */
 @media (max-width: 768px) {
-    .container-sobre {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
+  .container-sobre {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-    .foto-perfil {
-        margin-bottom: 20px;
-        height: 200px;
-        width: 200px;
-    }
+  .foto-perfil {
+    margin-bottom: 20px;
+    width: 180px; /* Menor em celular */
+    height: 180px;
+  }
 
-    .texto-sobre {
-        text-align: left;
-    }
+  .texto-sobre {
+    text-align: left;
+  }
+
+  h1 {
+    font-size: 1.5rem; /* Reduz o título em telas pequenas */
+  }
+
+  p {
+    font-size: 0.9rem; /* Reduz o corpo do texto */
+    line-height: 1.5; /* Mantém boa leitura */
+  }
+
+  /* Reduz proporcionalmente o tamanho dos retângulos */
+  .menu-circular {
+    gap: 5px; /* Reduz o espaço entre retângulos */
+  }
+
+  .menu-item {
+    width: 48px; /* Reduz a largura para 80% do tamanho original (60px * 0.8) */
+    height: 48px; /* Reduz a altura para manter o círculo perfeito */
+  }
+  
+  /* Ajusta o tamanho da fonte do texto no hover */
+  .menu-item::before {
+    font-size: 0.4rem; /* Reduz proporcionalmente a fonte */
+  }
+ 
+  .menu-inferior nav {
+    flex-direction: column; /* Empilha os itens verticalmente */
+    gap: 10px; /* Reduz o espaço entre itens */
+  }
+
+  .menu-item-inferior {
+    width: 80%; /* Largura máxima para cada item */
+    margin: 0 auto; /* Centraliza os itens na coluna */
+    font-size: 1.0rem; /* Reduz o tamanho da fonte */
+    padding: 8px 16px; /* Reduz o espaçamento interno */
+  }
+
 }
