@@ -7,7 +7,7 @@
   background-color: #A1866F; /* Cor de fundo do cabeçalho */
   z-index: 999; /* Garante que o cabeçalho fique acima de outros elementos */
   box-shadow: 0 2px 4px rgba(0,0,0,0.3); /* Adiciona uma sombra sutil */
-  padding: 40px 20px; /* Espaçamento interno: 10px em cima/baixo, 20px nas laterais */
+  padding: 10px 20px; /* Espaçamento interno: 10px em cima/baixo, 20px nas laterais */
 }
 
 /* Container do cabeçalho */
@@ -22,7 +22,7 @@
 /* Título fixo */
 .titulo-fixo {
   color: #6F4E37;
-  font-size: 4.0rem;
+  font-size: 2.0rem;
   margin: 0; /* Remove margens extras */
   margin-left: 40px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
@@ -36,8 +36,8 @@
 }
 
 .menu-item {
-  width: 140px;
-  height: 140px;
+  width: 80px;
+  height: 80px;
   position: relative; /* Necessário para posicionar o texto com ::after */
   cursor: pointer; /* Muda o cursor ao passar por cima */
   transition: transform 0.3s ease; /* Animação suave para efeito hover */
@@ -59,7 +59,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  font-size: 1.5rem;
+  font-size: 0.8rem;
   text-align: center;
   border-radius: 5px;
   opacity: 0;
@@ -85,7 +85,7 @@ body {
   font-family: Arial, Helvetica, sans-serif; /* Define a fonte */
   padding: 0 20px 10px 10px; /* Topo 0, laterais 10px, embaixo 10px */
   margin: 0;
-  padding-top: 500px; /* Ajustado para altura menor do cabeçalho */
+  padding-top: 200px; /* Ajustado para altura menor do cabeçalho */
 }
 
 /* Container com texto + imagem */
@@ -94,8 +94,8 @@ body {
   grid-template-columns: 2fr 300px; /* Coluna 1: texto, coluna 2: imagem */
   align-items: flex-start;
   gap: 10px;
-  margin-left: 150px; /* Importante para grudar no canto esquerdo */
-  margin-right: 800px; /* O restante do espaço fica à direita */
+  margin-left: 100px; /* Importante para grudar no canto esquerdo */
+  margin-right: 150px; /* O restante do espaço fica à direita */
   max-width: none;
 }
 
@@ -106,31 +106,31 @@ body {
 
 /* Texto da seção Sobre */
 .texto-sobre p {
-  font-size: 2.0rem; /* Define o tamanho da fonte para os parágrafos na seção Sobre */
+  font-size: 1.0rem; /* Define o tamanho da fonte para os parágrafos na seção Sobre */
   text-align: left; /* Alinha o texto à esquerda */
   line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
 }
 
 /* Formatando os títulos */
 h1 {
-  font-size: 3rem; /* Tamanho da fonte */
+  font-size: 1.5rem; /* Tamanho da fonte */
   color: #C8B6A6;
   font-weight: bold; /* Negrito */
   margin-bottom: 20px; /* Espaço abaixo do título */
-  margin-top: 50px;
+  margin-top: 20px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /* Formatando os parágrafos */
 p {
   text-align: left; /* Alinhando à esquerda */
-  line-height: 2.0; /* Espaçamento entre linhas */
+  line-height: 2.5; /* Espaçamento entre linhas */
 }
 
 /* Foto do perfil */
 .foto-perfil {
-  width: 600px; /* Largura da imagem */
-  height: 600px; /* Mantém o formato quadrado */
+  width: 250px; /* Largura da imagem */
+  height: 250px; /* Mantém o formato quadrado */
   border-radius: 50%; /* Transforma em círculo */
   object-fit: cover; /* Garante que a imagem preencha o espaço circular */
   border: 3px solid #C8B6A6;
@@ -150,22 +150,22 @@ p {
   
 .menu-inferior nav {
   display: inline-flex; /* Alinha os itens em linha, centralizados */
-  gap: 100px; /* Espaço entre os retângulos */
+  gap: 50px; /* Espaço entre os retângulos */
 }
 
 .menu-item-inferior {
   display: inline-block; /* Garante que os itens sejam tratados como blocos em linha */
-  width: 300px; /* Tamanho fixo de largura */
-  height: 50px; /* Tamanho fixo de altura */
+  width: 150px; /* Tamanho fixo de largura */
+  height: 10px; /* Tamanho fixo de altura */
   padding: 20px 30px; /* Espaçamento interno para dar tamanho ao retângulo */
   background-color: #A1866F; /* Cor de fundo base */
   color: #C8B6A6; /* Cor do texto */
   text-decoration: none; /* Remove sublinhado dos links */
-  font-size: 2.0rem; /* Tamanho da fonte */
+  font-size: 1.0rem; /* Tamanho da fonte */
   font-family: Arial, Helvetica, sans-serif; /* Fonte consistente com o body */
   border-radius: 0; /* Cantos retos, diferentemente dos círculos */
   text-align: center; /* Centraliza o texto horizontalmente */
-  line-height: 50px; /* Ajusta a altura da linha para centralizar verticalmente */
+  line-height: 10px; /* Ajusta a altura da linha para centralizar verticalmente */
   transition: background-color 0.3s ease; /* Animação suave para hover */
   font-weight: bold; /* Negrito */
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra embaixo dos retângulos */
