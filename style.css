@@ -83,9 +83,20 @@ body {
   background-color: #654C34; /* Deixa o fundo desta cor */
   color: #C8B6A6; /* Deixa o texto desta cor */
   font-family: Arial, Helvetica, sans-serif; /* Define a fonte */
-  padding: 0 20px 10px 10px; /* Topo 0, laterais 10px, embaixo 10px */
+  padding: 0;
+  box-sizing: border-box;
   margin: 0;
-  padding-top: 200px; /* Ajustado para altura menor do cabeçalho */
+  padding-top: 120px; /* Ajustado para altura menor do cabeçalho */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1; /* Faz o conteúdo ocupar o espaço entre header e footer */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 /* Container com texto + imagem */
@@ -97,6 +108,14 @@ body {
   margin-left: 100px; /* Importante para grudar no canto esquerdo */
   margin-right: 150px; /* O restante do espaço fica à direita */
   max-width: none;
+}
+
+/* Contêiner genérico para outras seções */
+.container-secao {
+  /*Adicionar margens e padding para consistência com Página 1 */
+  margin-left: 100px;
+  margin-right: 150px;
+  padding-top: 20px;
 }
 
 /* Texto com largura flexível */
@@ -140,12 +159,13 @@ p {
 
 /*MENU INFERIOR*/
 .menu-inferior {
-  position: relative; /* Posiciona o menu em relação ao fluxo normal */
+  position: relative; 
+  bottom: 0;
   background-color: #654C34; /* Cor de fundo consistente com o body */
   padding: 20px 0; /* Espaçamento interno vertical */
   width: 100%; /* Ocupa toda a largura da página */
   text-align: center; /* Centraliza os itens horizontalmente */
-  margin-top: 250px; /* Afastamento para baixo como ponto de partida */
+  margin-top: 50px; /* Espaço antes do menu */
   }
   
 .menu-inferior nav {
@@ -188,7 +208,291 @@ p {
   color: #6F4E37; /* Cor do texto no hover */
 }
 
-/* Responsivo para telas menores */
+/*PÁGINA 2 - FORMAÇÃO*/
+
+/* Texto da seção Sobre */
+.texto-formação {
+  font-size: 3.0rem; /* Define o tamanho da fonte para os parágrafos na seção Sobre */
+  text-align: center; /* centralizar */
+  line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
+  font-weight: bold; /* Negrito */
+  margin-bottom: 20px; /* Espaço abaixo do título */
+  margin-top: 0px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*MENU FORMAÇÃO*/
+.pagina2 {
+  position: relative; /* Posiciona o menu em relação ao fluxo normal */
+  background-color: #654C34; /* Cor de fundo consistente com o body */
+  padding: 20px 0; /* Espaçamento interno vertical */
+  width: 100%; /* Ocupa toda a largura da página */
+  text-align: center; /* Centraliza os itens horizontalmente */
+  margin-top: 50px; /* Afastamento para baixo como ponto de partida */
+
+  }
+  
+.pagina2 nav {
+  display: flex;
+  justify-content: center; /* Alinha os itens em linha, centralizados */
+  gap: 50px; /* Espaço entre os retângulos */
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.menu-formação {
+  display: inline-block; /* Garante que os itens sejam tratados como blocos em linha */
+  width: 250px; /* Tamanho fixo de largura */
+  height: 300px; /* Tamanho fixo de altura */
+  padding: 20px 30px; /* Espaçamento interno para dar tamanho ao retângulo */
+  background-color: #654C34; /* Cor de fundo base */
+  color: #654C34; /* Cor do texto */
+  text-decoration: none; /* Remove sublinhado dos links */
+  font-size: 1.0rem; /* Tamanho da fonte */
+  font-family: Arial, Helvetica, sans-serif; /* Fonte consistente com o body */
+  border-radius: 10%; /* Cantos retos, diferentemente dos círculos */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  line-height: 20px; /* Ajusta a altura da linha para centralizar verticalmente */
+  transition: background-color 0.3s ease; /* Animação suave para hover */
+  font-weight: bold; /* Negrito */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra embaixo dos retângulos */
+}
+
+
+.menu-formação.item-1 { background-color: #C8B6A6; }
+.menu-formação.item-2 { background-color: #C8B6A6; }
+.menu-formação.item-3 { background-color: #C8B6A6; }
+
+/* Efeito de hover no menu inferior */
+.menu-formação:hover {
+  transform: scale(1.1); /* Faz o "zoom out" crescer um pouco */
+  background-color: #A1866F; /* Cor alternativa no hover */
+  color: #6F4E37; /* Cor do texto no hover */
+}
+
+/*PÁGINA 3 - PROJETO*/
+
+/* Texto da seção Sobre */
+.texto-portfolio {
+  font-size: 3.0rem; /* Define o tamanho da fonte para os parágrafos na seção Sobre */
+  text-align: center; /* centralizar */
+  line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
+  font-weight: bold; /* Negrito */
+  margin-bottom: 20px; /* Espaço abaixo do título */
+  margin-top: 0px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+/*MENU FORMAÇÃO*/
+.pagina3 {
+  position: relative; /* Posiciona o menu em relação ao fluxo normal */
+  background-color: #654C34; /* Cor de fundo consistente com o body */
+  padding: 20px 0; /* Espaçamento interno vertical */
+  width: 100%; /* Ocupa toda a largura da página */
+  text-align: center; /* Centraliza os itens horizontalmente */
+  margin-top: 50px; /* Afastamento para baixo como ponto de partida */
+
+  }
+  
+.pagina3 nav {
+  display: flex;
+  justify-content: center; /* Alinha os itens em linha, centralizados */
+  gap: 50px; /* Espaço entre os retângulos */
+  margin-top: 20px;
+  padding-top: 20px;
+}
+
+.menu-portfolio {
+  display: inline-block; /* Garante que os itens sejam tratados como blocos em linha */
+  width: 250px; /* Tamanho fixo de largura */
+  height: 300px; /* Tamanho fixo de altura */
+  padding: 20px 30px; /* Espaçamento interno para dar tamanho ao retângulo */
+  background-color: #654C34; /* Cor de fundo base */
+  color: #654C34; /* Cor do texto */
+  text-decoration: none; /* Remove sublinhado dos links */
+  font-size: 1.0rem; /* Tamanho da fonte */
+  font-family: Arial, Helvetica, sans-serif; /* Fonte consistente com o body */
+  border-radius: 10%; /* Cantos retos, diferentemente dos círculos */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  line-height: 20px; /* Ajusta a altura da linha para centralizar verticalmente */
+  transition: background-color 0.3s ease; /* Animação suave para hover */
+  font-weight: bold; /* Negrito */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra embaixo dos retângulos */
+}
+
+
+.menu-portfolio.item-1 { background-color: #C8B6A6; }
+.menu-portfolio.item-2 { background-color: #C8B6A6; }
+.menu-portfolio.item-3 { background-color: #C8B6A6; }
+
+/* Efeito de hover no menu portfólio */
+.menu-portfolio:hover {
+  transform: scale(1.1); /* Faz o "zoom out" crescer um pouco */
+  background-color: #A1866F; /* Cor alternativa no hover */
+  color: #6F4E37; /* Cor do texto no hover */
+}
+
+/*PÁGINA 4 - CONTATO*/
+
+/* Texto da seção Sobre */
+.texto-contato {
+  font-size: 3.0rem; /* Define o tamanho da fonte para os parágrafos na seção Sobre */
+  text-align: center; /* centralizar */
+  line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
+  font-weight: bold; /* Negrito */
+  margin-bottom: 20px; /* Espaço abaixo do título */
+  margin-top: 0px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.texto-contato h1 + h1 {
+  margin-top: 20px;
+}
+
+/*Container dos contatos*/
+.container-contato {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Duas colunas de largura igual */
+  gap: 20px; /* Espaço entre os retângulos */
+  justify-content: center; /* Centraliza o grid */
+  align-items: center;
+  padding: 20px;
+  max-width: 600px; /* Limita a largura total */
+  margin: 0 auto; /* Centraliza o contêiner na página */
+}
+
+/* Estilo para os textos (itens ímpares) */
+.texto-contato-item {
+  display: block; /* Garante que o span se comporte como bloco */
+  font-size: 2.0rem;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #C8B6A6; /* Cor do texto para contrastar com o fundo #654C34 */
+  text-align: center;
+  padding: 10px 0; /* Espaçamento vertical */
+  background-color: transparent; /* Sem fundo */
+  border: none; /* Sem borda */
+  font-weight: bold; 
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Estilo para os retângulos (itens pares) */
+.menu-contato {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 250px;
+  height: 50px;
+  padding: 20px 30px;
+  background-color: #C8B6A6; /* Fundo mais claro */
+  color: #6F4E37; /* Texto visível */
+  text-decoration: none;
+  font-size: 1.0rem;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 0%;
+  text-align: center;
+  line-height: 20px;
+  transition: background-color 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border: 2px solid #C8B6A6; /* Borda para simular campo */
+}
+
+/* Efeito de hover no menu contato */
+.menu-contato:hover {
+  transform: scale(1.1); /* Faz o "zoom out" crescer um pouco */
+  background-color: #A1866F; /* Cor alternativa no hover */
+  color: #6F4E37; /* Cor do texto no hover */
+}
+
+/*PÁGINA 5 - CURIOSIDADES*/
+
+/* Texto da seção curiosidades */
+.texto-curiosidades {
+  font-size: 3.0rem; /* Define o tamanho da fonte para os parágrafos na seção Sobre */
+  text-align: center; /* centralizar */
+  line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
+  font-weight: bold; /* Negrito */
+  margin-bottom: 20px; /* Espaço abaixo do título */
+  margin-top: 0px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  
+}
+
+/*MENU curiosidades*/
+.pagina5 {
+  position: relative; /* Posiciona o menu em relação ao fluxo normal */
+  background-color: #654C34; /* Cor de fundo consistente com o body */
+  padding: 20px 0; /* Espaçamento interno vertical */
+  width: 100%; /* Ocupa toda a largura da página */
+  text-align: center; /* Centraliza os itens horizontalmente */
+  margin-top: 20px; /* Afastamento para baixo como ponto de partida */
+  min-height: 5vh;
+  }
+  
+.pagina5 nav {
+  display: flex;
+  justify-content: center; /* Alinha os itens em linha, centralizados */
+  gap: 50px; /* Espaço entre os retângulos */
+  margin-top: 20px;
+  padding-top: 20px;
+  
+}
+
+.menu-curiosidades {
+  display: inline-block; /* Garante que os itens sejam tratados como blocos em linha */
+  width: 500px; /* Tamanho fixo de largura */
+  height: 200px; /* Tamanho fixo de altura */
+  padding: 20px 30px; /* Espaçamento interno para dar tamanho ao retângulo */
+  background-color: #654C34; /* Cor de fundo base */
+  color: #654C34; /* Cor do texto */
+  text-decoration: none; /* Remove sublinhado dos links */
+  font-size: 1.0rem; /* Tamanho da fonte */
+  font-family: Arial, Helvetica, sans-serif; /* Fonte consistente com o body */
+  border-radius: 5%; /* Cantos retos, diferentemente dos círculos */
+  text-align: center; /* Centraliza o texto horizontalmente */
+  line-height: 20px; /* Ajusta a altura da linha para centralizar verticalmente */
+  transition: background-color 0.3s ease; /* Animação suave para hover */
+  font-weight: bold; /* Negrito */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Sombra embaixo dos retângulos */
+}
+
+
+.menu-curiosidades.item-1 { background-color: #C8B6A6; }
+.menu-curiosidades.item-2 { background-color: #C8B6A6; }
+.menu-curiosidades.item-3 { background-color: #C8B6A6; }
+
+/* Efeito de hover no menu inferior */
+.menu-curiosidades:hover {
+  transform: scale(1.1); /* Faz o "zoom out" crescer um pouco */
+  background-color: #A1866F; /* Cor alternativa no hover */
+  color: #6F4E37; /* Cor do texto no hover */
+}
+
+/* Adicionar estilo para o rodapé */
+.rodape-final {
+  position: relative;
+  width: 100%;
+  background-color: #A1866F;
+  color: #C8B6A6;
+  text-align: center;
+  padding: 5px 0;
+  box-shadow: 0 -2px 4px rgba(0,0,0,0.3);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.9rem;
+  margin-top: 100px;
+  margin-left: 0;
+  margin-right: 0;
+  }
+
+section {
+  padding-top: 120px; /* Offset para compensar o cabeçalho fixo */
+  margin-bottom: 50px; /* Espaço antes do menu inferior */
+}
+
+
 /* Responsivo para telas menores */
 @media (max-width: 768px) {
   .container-sobre {
@@ -244,4 +548,8 @@ p {
     padding: 8px 16px; /* Reduz o espaçamento interno */
   }
 
+  section {
+    padding-top: 150px;
+    margin-bottom: 50px;
+  }  
 }
