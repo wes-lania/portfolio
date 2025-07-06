@@ -336,11 +336,11 @@ p {
 
 /* Texto da seção Sobre */
 .texto-contato {
-  font-size: 3.0rem; /* Define o tamanho da fonte para os parágrafos na seção Sobre */
-  text-align: center; /* centralizar */
-  line-height: 1.6; /* Espaçamento entre linhas para melhor legibilidade */
-  font-weight: bold; /* Negrito */
-  margin-bottom: 10px; /* Espaço abaixo do título */
+  font-size: 3.0rem;
+  text-align: center;
+  line-height: 1.6;
+  font-weight: bold;
+  margin-bottom: 10px;
   margin-top: 0px;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
@@ -349,29 +349,38 @@ p {
   margin-top: 20px;
 }
 
+/* Wrapper para alinhar contatos e formulário */
+.container-contato-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
 /*Container dos contatos*/
 .container-contato {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Duas colunas de largura igual */
-  gap: 20px; /* Espaço entre os retângulos */
-  justify-content: center; /* Centraliza o grid */
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  justify-content: center;
   align-items: center;
   padding: 20px;
-  max-width: 600px; /* Limita a largura total */
-  margin: 0 auto; /* Centraliza o contêiner na página */
+  max-width: 600px;
 }
 
 /* Estilo para os textos (itens ímpares) */
 .texto-contato-item {
-  display: block; /* Garante que o span se comporte como bloco */
+  display: block;
   font-size: 2.0rem;
   font-family: Arial, Helvetica, sans-serif;
-  color: #C8B6A6; /* Cor do texto para contrastar com o fundo #654C34 */
+  color: #C8B6A6;
   text-align: center;
-  padding: 10px 0; /* Espaçamento vertical */
-  background-color: transparent; /* Sem fundo */
-  border: none; /* Sem borda */
-  font-weight: bold; 
+  padding: 10px 0;
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
   height: 100px;
   display: flex;
   align-items: center;
@@ -386,8 +395,8 @@ p {
   width: 250px;
   height: 50px;
   padding: 20px 30px;
-  background-color: #C8B6A6; /* Fundo mais claro */
-  color: #6F4E37; /* Texto visível */
+  background-color: #C8B6A6;
+  color: #6F4E37;
   text-decoration: none;
   font-size: 1.0rem;
   font-family: Arial, Helvetica, sans-serif;
@@ -397,15 +406,84 @@ p {
   transition: background-color 0.3s ease;
   font-weight: bold;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-  border: 2px solid #C8B6A6; /* Borda para simular campo */
+  border: 2px solid #C8B6A6;
 }
 
 /* Efeito de hover no menu contato */
 .menu-contato:hover {
-  transform: scale(1.1); /* Faz o "zoom out" crescer um pouco */
-  background-color: #A1866F; /* Cor alternativa no hover */
-  color: #6F4E37; /* Cor do texto no hover */
+  transform: scale(1.1);
+  background-color: #A1866F;
+  color: #6F4E37;
 }
+
+/* Estilo do formulário */
+.container-formulario {
+  /* ALTERAR AQUI: Adicionar margem superior para ajustar a posição para baixo */
+  margin-top: 20px; /* Ajuste inicial, pode ser modificado */
+  padding: 20px;
+  background-color: #C8B6A6;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  color: #6F4E37;
+  width: 100%;
+  max-width: 300px;
+}
+
+.container-formulario label {
+  font-size: 1.0rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.container-formulario input,
+.container-formulario textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 2px solid #6F4E37;
+  border-radius: 5px;
+  font-size: 1.0rem;
+  background-color: #fff;
+  color: #6F4E37;
+}
+
+.container-formulario textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+.container-formulario button {
+  width: 100%;
+  padding: 10px;
+  background-color: #A1866F;
+  color: #C8B6A6;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.0rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.container-formulario button:hover {
+  background-color: #6F4E37;
+  color: #C8B6A6;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  .container-contato-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .container-contato, .container-formulario {
+    max-width: 100%;
+  }
+  .container-formulario {
+    margin-top: 0; /* Remove margem em telas menores para empilhamento */
+  }
+}
+
 
 /*PÁGINA 5 - CURIOSIDADES*/
 
