@@ -393,7 +393,7 @@ p {
   align-items: center;
   justify-content: center;
   width: 250px;
-  height: 50px;
+  height: 30px;
   padding: 20px 30px;
   background-color: #C8B6A6;
   color: #6F4E37;
@@ -416,54 +416,93 @@ p {
   color: #6F4E37;
 }
 
+/* Ícone linkedin */
+.linkedin {
+  width: 30px; /* Largura da imagem */
+  height: 30px; /* Mantém o formato quadrado */
+  border-radius: 50%; /* Transforma em círculo */
+  object-fit: cover; /* Garante que a imagem preencha o espaço circular */
+  border: 3px solid #C8B6A6;
+  margin-top: 0%;
+  margin-left: 10; /* Ou mais, se quiser */
+}
+
+/* Ícone github */
+.github {
+  width: 30px; /* Largura da imagem */
+  height: 30px; /* Mantém o formato quadrado */
+  border-radius: 50%; /* Transforma em círculo */
+  object-fit: cover; /* Garante que a imagem preencha o espaço circular */
+  border: 3px solid #C8B6A6;
+  margin-top: 0%;
+  margin-left: 10; /* Ou mais, se quiser */
+}
+
+/* Ícone linkedin */
+.email {
+  width: 30px; /* Largura da imagem */
+  height: 30px; /* Mantém o formato quadrado */
+  border-radius: 50%; /* Transforma em círculo */
+  object-fit: cover; /* Garante que a imagem preencha o espaço circular */
+  border: 3px solid #C8B6A6;
+  margin-top: 0%;
+  margin-left: 10; /* Ou mais, se quiser */
+}
+
+/* Ícone WhatsApp */
+.wpp {
+  width: 30px; /* Largura da imagem */
+  height: 30px; /* Mantém o formato quadrado */
+  border-radius: 50%; /* Transforma em círculo */
+  object-fit: cover; /* Garante que a imagem preencha o espaço circular */
+  border: 3px solid #C8B6A6;
+  margin-top: 0%;
+  margin-left: 10; /* Ou mais, se quiser */
+}
+
 /* Estilo do formulário */
 .container-formulario {
-  /* ALTERAR AQUI: Adicionar margem superior para ajustar a posição para baixo */
-  margin-top: 20px; /* Ajuste inicial, pode ser modificado */
-  padding: 20px;
+  margin-top: 44px;
+  padding: 8px;
   background-color: #C8B6A6;
   border-radius: 10px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
   color: #6F4E37;
-  width: 100%;
-  max-width: 300px;
+  width: 150%;
+  max-width: 250px;
+  max-height: 478px;
+  overflow-y: auto;
 }
 
 .container-formulario label {
-  font-size: 1.0rem;
-  font-weight: bold;
-  margin-bottom: 5px;
+  font-size: 0.9rem;
+  margin-bottom: 4px;
   display: block;
 }
 
 .container-formulario input,
 .container-formulario textarea {
-  width: 100%;
-  padding: 8px;
-  margin-bottom: 10px;
+  width: 90%;
+  padding: 5px;
+  margin-bottom: 5px;
   border: 2px solid #6F4E37;
   border-radius: 5px;
-  font-size: 1.0rem;
-  background-color: #fff;
-  color: #6F4E37;
+  font-size: 0.9rem;
 }
 
 .container-formulario textarea {
   resize: vertical;
-  min-height: 100px;
+  min-height: 40px;
 }
 
 .container-formulario button {
   width: 100%;
-  padding: 10px;
+  padding: 6px;
   background-color: #A1866F;
   color: #C8B6A6;
   border: none;
   border-radius: 5px;
-  font-size: 1.0rem;
-  font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-size: 0.9rem;
 }
 
 .container-formulario button:hover {
